@@ -4,8 +4,21 @@ import "./ReviewCandidateList.css";
 import axios from 'axios';
 import { AppContext } from '@/context';
 
+interface Candidate {
+    // Define properties of the candidate object
+    // Adjust types as per your actual data structure
+    firstName: string;
+    email: string;
+    media: { url: string }[];
+    score: {
+        totalPercentage: number;
+        // Add other score properties if needed
+    };
+    // Add other properties if needed
+}
+
 const ReviewCandidateList = () => {
-    const [reviewUserList, setReviewUserList]= useState([]);
+    const [reviewUserList, setReviewUserList]= useState<Candidate[]>([]);
     const {setUserDetails, userDetails, userAction} = useContext(AppContext);
     const getAllUserAPI = async() => {
         try{
@@ -30,7 +43,7 @@ const ReviewCandidateList = () => {
         getAllUserAPI();
     },[userAction])
 
-    const handleCandidate = (cn) => {
+    const handleCandidate = (cn: Candidate) => {
         setUserDetails(cn);
     }
   return (
