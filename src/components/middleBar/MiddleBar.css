@@ -1,0 +1,179 @@
+.middle-bar-container{
+    width: 25%;
+    /* border: 1px solid red; */
+    
+}
+
+.middle-bar-header{
+    padding-left: 12px;
+    margin-top: 8px;
+    padding-bottom: 12px;
+}
+
+.middle-bar-header-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.middle-bar-header-wrapper > h1{
+    font-size: 0.87rem;
+}
+
+.middle-bar-header-wrapper > :nth-child(1){
+    opacity: 20%;
+}
+
+.middle-bar-header > h2{
+    margin: 0;
+    font-size: 0.87rem;
+}
+
+.middle-bar-body{
+    background-color: rgb(241, 245, 248);
+    border-radius: 8px;
+}
+
+.middle-bar-candidate-task-details{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    margin-top: 4px;
+}
+
+.middle-bar-candidate-task-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.middle-bar-candidate-task-header > h1{
+    font-size: 1rem;
+}
+
+.middle-bar-candidate-task-header > .wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.middle-bar-candidate-task-header > .wrapper > h2{
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgb(1, 131, 1);
+}
+
+.middle-bar-candidate-task-header > .wrapper > span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 6px;
+}
+
+.svg-pen{
+    width: 12px;
+    height: 12px;
+    fill:"#000000";
+}
+
+.middle-bar-candidate-task-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.middle-bar-candidate-task-item > h3{
+    font-size: 0.77rem;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.middle-bar-candidate-task-details > :nth-child(2) > :nth-child(2){ 
+    color: rgb(9, 71, 185);
+}
+
+.middle-bar-candidate-toggle-btn-container{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding-left: 8px;
+}
+
+.candidate-toggle-bar-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.candidate-toggle-bar-btn:hover{
+    background-color: #e6edf5;
+}
+
+.active{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.candidate-toggle-bar-btn > h1 {
+    font-size: 0.8rem;
+}
+
+.svg-cube{
+    width: 16px;
+    height: 16px;
+}
+
+.svg-file{
+    width: 16px;
+    height: 16px;
+}
+
+.middle-bar-candidate-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.middle-bar-candidate-title > h4{
+    margin-left: 8px;
+    opacity: 20%;
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 16px;
+}
+
+.middle-bar-show-candidate-list{
+    overflow: hidden;
+    height: 300px;
+}
+
+.middle-bar-show-candidate-list:hover{
+    overflow: scroll;
+}
+
+.middle-bar-show-candidate-list::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.middle-bar-show-candidate-list::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+.middle-bar-show-candidate-list::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Rounded corners of the thumb */
+}
+
+.middle-bar-show-candidate-list::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
