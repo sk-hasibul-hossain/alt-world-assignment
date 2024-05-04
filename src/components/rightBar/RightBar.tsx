@@ -8,6 +8,7 @@ import axios from 'axios';
 
 const RightBar = () => {
   const {setUserDetails, userDetails, userAction, setUserAction} = useContext(AppContext);
+  // const [details, setDetails] = useState();
   useEffect(() => {
     setUserDetails(userAction);
   }, [userAction])
@@ -37,11 +38,11 @@ const RightBar = () => {
   const items = [
     <div className="item" key={1}>
       <video width="100%" controls className="media">
-        <source src={"https://www.youtube.com/shorts/dmvPxRyZVHI"} />
+        <source src={userDetails?.media[1]?.url} />
       </video>
     </div>,
     <div className="item" key={2}>
-      <img src={"https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvdG98ZW58MHx8MHx8fDA%3D"} alt="media" className="media" />
+      <img src={userDetails?.media[0]?.url} alt="media" className="media" />
     </div>,
   ];
 
@@ -60,7 +61,7 @@ const RightBar = () => {
   const shortlistAPI = async() =>{
     try{
       const response = await axios.post(
-        'http://localhost:3500/candidate/updateShortlistStatus/',
+        'https://hasibul-backend.onrender.com/candidate/updateShortlistStatus/',
         {
           email: userDetails?.email,
           status: true
@@ -76,6 +77,10 @@ const RightBar = () => {
 
     }
   }
+
+  // useEffect(() => {
+  //   setDetails
+  // },[userAction])
 
   const handleSortList = () => {
     shortlistAPI();

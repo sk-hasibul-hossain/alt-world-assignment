@@ -9,7 +9,7 @@ const ReviewCandidateList = () => {
     const {setUserDetails, userDetails, userAction} = useContext(AppContext);
     const getAllUserAPI = async() => {
         try{
-            const response = await axios.get("http://localhost:3500/candidate/underReviewCandidate?page=1&perPage=100");
+            const response = await axios.get("https://hasibul-backend.onrender.com/candidate/underReviewCandidate?page=1&perPage=100");
             // const reviewData = response?.data?.filter((val) => {
             //     if(!val.isShortlisted){
             //         return true;
@@ -18,7 +18,7 @@ const ReviewCandidateList = () => {
             const reviewData = response?.data;
             if(!userDetails && reviewData?.length > 0) {
                 setUserDetails(reviewData[0]);
-            }else{
+            }else if(userAction){
                 setUserDetails(userAction);
             }
             setReviewUserList(reviewData);   
