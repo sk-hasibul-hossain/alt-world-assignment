@@ -43,14 +43,15 @@ const ReviewCandidateList = () => {
         getAllUserAPI();
     },[userAction])
 
-    const handleCandidate = (cn: any) => {
-        setUserDetails(cn);
-    }
+    // const handleCandidate = (cn: Candidate) => {
+    //     setUserDetails(cn);
+    // }
   return (
     <div className='review-candidates'>
         {reviewUserList?.length > 0 ? reviewUserList?.map((element, index) => {
             return <div key={index} className='list' onClick={() => {
-                handleCandidate(element)
+                // handleCandidate(element)
+                setUserDetails(element)
             }}>
                 <div className='review-candidate'>
                     <div className='review-candidate-img'>
