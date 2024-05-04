@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Dashboard.css";
+import "./DashBoard.css";
 import LeftBar from '../leftBar/LeftBar'
 import MiddleBar from '../middleBar/MiddleBar'
 import RightBar from '../rightBar/RightBar'
