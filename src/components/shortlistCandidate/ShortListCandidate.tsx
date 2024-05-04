@@ -43,7 +43,7 @@ const ShortListCandidate = () => {
         getAllUserAPI();
     },[userAction])
 
-    const handleCandidate = (cn: Candidate) => {
+    const handleCandidate = (cn: any) => {
         setUserDetails(cn);
     }
   return (
